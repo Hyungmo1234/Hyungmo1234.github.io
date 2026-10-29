@@ -238,7 +238,7 @@ h1 {
 }
 .foot-contacts a:hover { border-bottom-color: var(--ink); }
 
-.resume { max-width: 720px; }
+.resume { max-width: 760px; }
 .resume .lead {
   margin: 0 0 36px;
   color: var(--muted);
@@ -306,6 +306,53 @@ h1 {
   font-size: 13px;
   font-weight: 600;
 }
+.resume .co {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.resume .period {
+  margin: 0 0 10px;
+  color: var(--faint);
+  font-size: 13px;
+}
+.resume .works {
+  margin: 0;
+  padding: 0;
+}
+.resume .works li {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 4px 14px;
+  padding: 8px 0;
+  border-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.resume .works .when {
+  color: var(--faint);
+  font-size: 13px;
+}
+.resume .works .what strong {
+  font-weight: 700;
+}
+.resume .works .what span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+.resume .note-block {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.resume h3.sub {
+  margin: 18px 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
 
 @media (max-width: 640px) {
   .wrap { width: min(100% - 28px, 1080px); padding-top: 32px; }
@@ -313,6 +360,7 @@ h1 {
   .foot-inner { width: min(100% - 28px, 1080px); }
   .resume dl { grid-template-columns: 1fr; gap: 2px 0; }
   .resume dt { margin-top: 8px; }
+  .resume .works li { grid-template-columns: 1fr; }
 }
 
 @media print {
