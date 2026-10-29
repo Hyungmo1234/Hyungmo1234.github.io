@@ -30,6 +30,16 @@
     <article class="resume">
       <p class="lead">웹 개발 경력 8년(SI · SM)<br>AI, 공정 자동화 수련중</p>
 
+      <h2>자기소개</h2>
+      <div class="intro">
+        <p class="intro-open"><span id="korean-age">35</span>살 8년차 웹 개발 경력 및 AI 엔지니어 <strong>양형모</strong>입니다.</p>
+        <p class="intro-motto"><strong>엉덩이를 무겁게</strong></p>
+        <p>빠르게 발전하는 AI 시대에, 어쩌면 우리가 속해있는 많은 직업은 의미가 없어질 지 모릅니다. 그럼에도 업무의 시작과 마무리도 사람이 결정하고, 그 업무의 완성도는 당사자의 끈기가 만들어냅니다.</p>
+        <p>꽤 오랜시간, 작업물에서의 묘한 불편함, 적당한 완성도를 불쾌해하며 자리를 떠나지 않았고, 그 보상은 ‘남들보다 아주 조금 더 나은 작업물’이었습니다.</p>
+        <p>저는 99.9%와 99.99%의 차이를 이해하는 사람이라고 생각합니다.</p>
+        <p>마지막 0.09%를 채우기 위한 노력에 비해 그 보상은 작아 보일 수 있습니다. 그럼에도 타협하지 않고, 일정이 허락하는 한 99.999%를 향해 나아갈 수 있도록 끊임없이 팀을 설득할 것입니다.</p>
+      </div>
+
       <h2>연락처</h2>
       <dl>
         <dt>이름</dt>
@@ -61,13 +71,13 @@
         <li>Spring (eGov)</li>
         <li>JSP</li>
         <li>JavaScript</li>
+        <li>Python</li>
         <li>Tibero</li>
         <li>Oracle</li>
         <li>Cubrid</li>
       </ul>
       <h3 class="sub">그 외</h3>
       <ul class="skills">
-        <li>Python</li>
         <li>FastAPI</li>
         <li>GitHub Actions</li>
         <li>PWA</li>
@@ -75,6 +85,21 @@
         <li>YouTube API</li>
         <li>Whisper</li>
         <li>Cursor SDK</li>
+      </ul>
+      <h3 class="sub">데일리하우스 (부동산 뉴스)</h3>
+      <ul class="skills">
+        <li>네이버 뉴스 API</li>
+        <li>규칙 기반 관련성 점수</li>
+        <li>키워드 카테고리 분류</li>
+        <li>제목 정규화·동의어</li>
+        <li>문자 바이그램 Jaccard</li>
+        <li>SequenceMatcher 유사도</li>
+        <li>LLM 사건 클러스터링</li>
+        <li>관련성·중복·매체 가중 랭킹</li>
+        <li>OpenAI 요약</li>
+        <li>중요도 스코어링</li>
+        <li>Jinja2</li>
+        <li>Pillow</li>
       </ul>
       <p class="note-block">공공기관 웹 시스템 개발·유지보수가 주력입니다. 마이데이터 API 솔루션 개발과 적용 프로젝트에도 참여해, API를 업무 시스템에 붙이는 일을 해봤습니다.</p>
 
@@ -174,7 +199,7 @@
         </li>
         <li>
           <h3>데일리하우스</h3>
-          <p>매일 아침 부동산 뉴스를 모아 요약하는 페이지. GitHub Pages로 발행합니다.</p>
+          <p>네이버 뉴스를 모아 규칙 기반 관련성 점수·카테고리 분류로 거르고, 제목 바이그램 Jaccard와 SequenceMatcher로 1차 중복을 뺍니다. 같은 사건은 LLM으로 묶어 병합한 뒤, 관련성·중복 매체·주요 언론 가중으로 랭킹하고 OpenAI로 요약·중요도를 매깁니다. GitHub Pages와 인스타 카드(Pillow)로 발행합니다.</p>
           <p><a href="https://hyungmo1234.github.io/daily-house/" target="_blank" rel="noopener">뉴스 페이지</a></p>
         </li>
         <li>
@@ -208,5 +233,12 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var el = document.getElementById("korean-age");
+      if (!el) return;
+      el.textContent = new Date().getFullYear() - 1992 + 1;
+    })();
+  </script>
 </body>
 </html>

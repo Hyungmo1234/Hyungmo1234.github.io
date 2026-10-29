@@ -245,6 +245,31 @@ h1 {
   font-size: 16px;
   line-height: 1.75;
 }
+.resume .intro {
+  margin: 0;
+}
+.resume .intro p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.resume .intro p:last-child { margin-bottom: 0; }
+.resume .intro-open {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.resume .intro-open strong { font-weight: 700; }
+.resume .intro-motto {
+  margin: 18px 0 12px;
+  font-family: Hahmlet, Pretendard, serif;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.resume .intro-motto strong { font-weight: 700; }
 .resume h2 {
   font-size: 13px;
   font-weight: 700;
