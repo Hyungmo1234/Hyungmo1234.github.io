@@ -238,7 +238,7 @@ h1 {
 }
 .foot-contacts a:hover { border-bottom-color: var(--ink); }
 
-.resume { max-width: 760px; }
+.resume { max-width: none; }
 .resume .lead {
   margin: 0 0 36px;
   color: var(--muted);
@@ -366,12 +366,6 @@ h1 {
   color: var(--muted);
   font-size: 13px;
   margin-top: 2px;
-}
-.resume .note-block {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.65;
 }
 .resume h3.sub {
   margin: 18px 0 8px;
