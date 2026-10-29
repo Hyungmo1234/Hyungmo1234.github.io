@@ -245,6 +245,9 @@ h1 {
   font-size: 16px;
   line-height: 1.75;
 }
+.resume .profile {
+  margin: 0 0 28px;
+}
 .resume .intro {
   margin: 0;
 }
