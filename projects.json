@@ -1,0 +1,112 @@
+{
+  "title": "프로젝트 한눈에",
+  "githubUser": "Hyungmo1234",
+  "skipRepos": ["kkkk", "no"],
+  "projects": [
+    {
+      "id": "daily-english",
+      "name": "매일하루영단어",
+      "blurb": "하루 한 장의 영단어·숙어. PWA로 폰 홈 화면에서 공부하고, 숏츠도 함께 올라갑니다.",
+      "kind": "web",
+      "accent": "#c9a227",
+      "mark": "Aa",
+      "web": "https://daily-english-hyungmo.fly.dev",
+      "webLabel": "웹 앱",
+      "git": "https://github.com/Hyungmo1234/daily-english",
+      "gitName": "daily-english",
+      "private": true,
+      "youtube": "https://www.youtube.com/channel/UCIBCHpm-Y71wkQBVet9wXzw",
+      "note": "Fly.io · 절전 중이면 첫 접속이 몇 초 걸릴 수 있습니다"
+    },
+    {
+      "id": "daily-nihongo",
+      "name": "매일하루일본어",
+      "blurb": "하루 한 장의 일본어 단어·숙어. 히라가나 후리가나와 함께 보고, 유튜브에도 올립니다.",
+      "kind": "web",
+      "accent": "#c45c5c",
+      "mark": "あ",
+      "web": "https://daily-nihongo-hyungmo.fly.dev",
+      "webLabel": "웹 앱",
+      "git": "https://github.com/Hyungmo1234/daily-nihongo",
+      "gitName": "daily-nihongo",
+      "private": true,
+      "youtube": "https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg",
+      "note": "Fly.io 배포 주소 · 앱이 없으면 배포가 필요합니다"
+    },
+    {
+      "id": "daily-house",
+      "name": "데일리하우스",
+      "blurb": "매일 아침 자동으로 모으고 요약하는 부동산 뉴스 브리핑.",
+      "kind": "web",
+      "accent": "#0E9F8E",
+      "mark": "家",
+      "web": "https://hyungmo1234.github.io/daily-house/",
+      "webLabel": "뉴스 페이지",
+      "git": "https://github.com/Hyungmo1234/daily-house",
+      "gitName": "daily-house",
+      "private": false
+    },
+    {
+      "id": "lecture-kit",
+      "name": "강의 녹음 툴",
+      "blurb": "수업 마이크·휴대폰 녹음을 받아쓰고, Cursor로 강의 노트를 정리합니다. 웹이 아니라 PC에서 실행합니다.",
+      "kind": "tool",
+      "accent": "#6b8afd",
+      "mark": "🎙",
+      "local": true
+    },
+    {
+      "id": "hm-cursor-desk",
+      "name": "형모 Cursor Desk",
+      "blurb": "Cursor SDK를 쓰는 Windows 데스크톱 채팅 앱. 세션·첨부·로컬 에이전트 작업을 한 창에서 합니다.",
+      "kind": "tool",
+      "accent": "#f27d26",
+      "mark": "▣",
+      "local": true
+    },
+    {
+      "id": "playchrome",
+      "name": "VS Workspace Theme",
+      "blurb": "커뮤니티 페이지를 VS Code 워크스페이스처럼 보이게 하는 크롬 확장 프로그램.",
+      "kind": "tool",
+      "accent": "#3c9d64",
+      "mark": "{ }",
+      "local": true
+    },
+    {
+      "id": "261015python",
+      "name": "파이썬 공부",
+      "blurb": "파이썬 기초 연습과 매일 공부 노트. 날짜 폴더에 기록하고 자동으로 올립니다.",
+      "kind": "study",
+      "accent": "#3776ab",
+      "mark": "Py",
+      "git": "https://github.com/Hyungmo1234/261015python",
+      "gitName": "261015python",
+      "private": false
+    },
+    {
+      "id": "prophecy",
+      "name": "Prophecy",
+      "blurb": "AI 부동산 인텔리전스 플랫폼.",
+      "kind": "study",
+      "accent": "#7c5cbf",
+      "mark": "P",
+      "git": "https://github.com/Hyungmo1234/prophecy",
+      "gitName": "prophecy",
+      "private": true
+    },
+    {
+      "id": "mobile-invitation",
+      "name": "모바일 청첩장",
+      "blurb": "Cursor로 만든 모바일 청첩장.",
+      "kind": "web",
+      "accent": "#e8a0bf",
+      "mark": "✉",
+      "web": "https://mobile-invitation-by-cursor.vercel.app",
+      "webLabel": "웹 열기",
+      "git": "https://github.com/Hyungmo1234/mobile_invitationByCursor",
+      "gitName": "mobile_invitationByCursor",
+      "private": false
+    }
+  ]
+}
