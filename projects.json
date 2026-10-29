@@ -98,7 +98,7 @@
     {
       "id": "mobile-invitation",
       "name": "모바일 청첩장",
-      "blurb": "Cursor로 만든 모바일 청첩장.",
+      "blurb": "2026년 5월, 결혼을 위해 TypeScript·Next.js로 직접 만들고 Vercel에 띄운 모바일 청첩장.",
       "kind": "web",
       "accent": "#e8a0bf",
       "mark": "✉",
