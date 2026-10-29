@@ -2,7 +2,9 @@
 
 GitHub 저장소 목록 대신, 각 프로젝트의 **웹**과 **Git**을 한 페이지에서 엽니다.
 
-**뷰어:** https://hyungmo1234.github.io/chkAPJ/
+**뷰어:** https://hyungmo1234.github.io/
+
+이 저장소(`Hyungmo1234.github.io`)가 계정 GitHub Pages 홈입니다. GitHub 프로필 첫 화면은 [`Hyungmo1234/Hyungmo1234`](https://github.com/Hyungmo1234/Hyungmo1234) README입니다.
 
 로컬에서는 `index.html`을 브라우저로 열거나, 이 폴더에서 정적 서버를 켜면 됩니다.
 
