@@ -128,6 +128,9 @@
         if (p.youtube) {
           buttons.push(`<a class="btn ghost" href="${esc(p.youtube)}" target="_blank" rel="noopener">YouTube</a>`);
         }
+        if (p.instagram) {
+          buttons.push(`<a class="btn ghost" href="${esc(p.instagram)}" target="_blank" rel="noopener">Instagram</a>`);
+        }
         if (!buttons.length && p.local) {
           buttons.push(`<span class="btn ghost">로컬만</span>`);
         }

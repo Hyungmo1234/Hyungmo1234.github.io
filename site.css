@@ -334,6 +334,12 @@ h1 {
   font-size: 13px;
   font-weight: 600;
 }
+.resume .jobs .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 6px;
+}
 .resume .co {
   margin: 0 0 2px;
   font-size: 16px;
