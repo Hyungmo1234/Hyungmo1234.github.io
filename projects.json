@@ -40,13 +40,10 @@
       "kind": "web",
       "accent": "#c45c5c",
       "mark": "あ",
-      "web": "https://daily-nihongo-hyungmo.fly.dev",
-      "webLabel": "웹 앱",
       "git": "https://github.com/Hyungmo1234/daily-nihongo",
       "gitName": "daily-nihongo",
       "private": true,
-      "youtube": "https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg",
-      "note": "Fly.io 배포 주소 · 앱이 없으면 배포가 필요합니다"
+      "youtube": "https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg"
     },
     {
       "id": "daily-house",
