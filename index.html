@@ -25,6 +25,7 @@
         </span>
       </p>
       <h1>개인 프로젝트 모음</h1>
+      <p class="run-banner" id="run-banner" hidden></p>
     </header>
 
     <div class="toolbar">
@@ -63,7 +64,7 @@
       projects: []
     };
 
-    const state = { kind: "all", q: "", catalog: FALLBACK, pushed: {} };
+    const state = { kind: "all", q: "", catalog: FALLBACK, pushed: {}, status: { jobs: {} } };
 
     const grid = document.getElementById("grid");
     const search = document.querySelector(".search");
@@ -95,6 +96,18 @@
       if (day === 1) return "어제";
       if (day < 14) return day + "일 전";
       return new Date(iso).toISOString().slice(0, 10);
+    }
+
+    function statusBlock(p) {
+      const job = p.job && state.status.jobs && state.status.jobs[p.job];
+      if (!job) return "";
+      const klass = job.state === "ok" ? "ok" : job.state === "bad" ? "bad" : "wait";
+      const summary = job.summary ? `<span class="run-summary">${esc(job.summary)}</span>` : "";
+      const inner = `<span class="run-dot"></span><span class="run-label">${esc(job.label || "")}</span>${summary}`;
+      if (job.url) {
+        return `<a class="run-status ${klass}" href="${esc(job.url)}" target="_blank" rel="noopener">${inner}</a>`;
+      }
+      return `<p class="run-status ${klass}">${inner}</p>`;
     }
 
     function matches(p) {
@@ -144,6 +157,7 @@
               </div>
             </div>
             <p class="blurb">${esc(p.blurb)}</p>
+            ${statusBlock(p)}
             ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
             <div class="actions">${buttons.join("")}</div>
           </article>`;
@@ -156,6 +170,19 @@
         if (res.ok) state.catalog = await res.json();
       } catch (_) { /* file:// 로 열면 JSON을 못 읽을 수 있음 */ }
       render();
+      try {
+        const res = await fetch("status.json", { cache: "no-store" });
+        if (res.ok) {
+          state.status = await res.json();
+          const banner = document.getElementById("run-banner");
+          if (banner && state.status.summary) {
+            banner.hidden = false;
+            banner.textContent = state.status.summary;
+            banner.className = "run-banner" + (state.status.ok ? " ok" : " bad");
+          }
+          render();
+        }
+      } catch (_) { /* status.json 없어도 목록은 연다 */ }
       try {
         const user = state.catalog.githubUser || "Hyungmo1234";
         const res = await fetch(`https://api.github.com/users/${user}/repos?per_page=100&sort=pushed`);

@@ -54,6 +54,43 @@ h1 {
   letter-spacing: -0.03em;
   margin: 0;
 }
+.run-banner {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  background: var(--fill);
+  color: var(--muted);
+}
+.run-banner.ok { background: #e7f2ea; color: var(--forest); }
+.run-banner.bad { background: #f8e8e4; color: #8a3a2a; }
+.run-status {
+  margin: -6px 0 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--fill);
+  color: var(--muted);
+  text-decoration: none;
+}
+.run-status.ok { background: #e7f2ea; color: var(--forest); }
+.run-status.bad { background: #f8e8e4; color: #8a3a2a; }
+.run-status.wait { background: #f3edd9; color: #6b5a20; }
+.run-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex: 0 0 auto;
+  background: currentColor;
+}
+.run-label { font-weight: 700; white-space: nowrap; }
+.run-summary { opacity: 0.92; }
 .gh {
   color: var(--muted);
   text-decoration: none;

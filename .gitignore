@@ -1,7 +1,11 @@
 .DS_Store
 Thumbs.db
+.env
+lecture-words/.env
 *.log
 .idea/
 .vscode/
 .cursor/
 .tmp-resume/
+__pycache__/
+*.pyc

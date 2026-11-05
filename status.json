@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-11-05T09:41+09:00",
+  "ok": false,
+  "summary": "이상 매일하루일본어 (유튜브 로그인 갱신에 실패했습니다.)",
+  "jobs": {
+    "daily-english": {
+      "id": "daily-english",
+      "name": "매일하루영단어",
+      "ok": true,
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-05 08:41 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/41935615159",
+      "at": "2026-11-04T23:41:55Z",
+      "web": {
+        "ok": true,
+        "code": 200
+      }
+    },
+    "daily-english-ja": {
+      "id": "daily-english-ja",
+      "name": "매일하루영단어 (일본인)",
+      "ok": true,
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-05 08:55 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/41937392145",
+      "at": "2026-11-04T23:55:52Z"
+    },
+    "daily-nihongo": {
+      "id": "daily-nihongo",
+      "name": "매일하루일본어",
+      "ok": false,
+      "state": "bad",
+      "label": "이상",
+      "summary": "유튜브 로그인 갱신에 실패했습니다.",
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/41922177404",
+      "at": "2026-11-04T22:06:56Z"
+    },
+    "daily-house": {
+      "id": "daily-house",
+      "name": "데일리하우스",
+      "ok": true,
+      "state": "wait",
+      "label": "대기",
+      "summary": "오늘 실행 아직 없음 · 마지막은 11-04 23:27",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/41847640571",
+      "at": "2026-11-04T14:27:06Z",
+      "web": {
+        "ok": true,
+        "code": 200
+      }
+    }
+  }
+}
