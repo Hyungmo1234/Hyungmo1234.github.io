@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>관리자 설정</title>
+  <link rel="stylesheet" href="site.css" />
+  <style>
+    .setup { max-width: 560px; margin: 0 auto; }
+    .setup h1 { font-size: 28px; margin: 0 0 12px; }
+    .setup p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .setup label { display: block; margin: 14px 0 8px; font-size: 13px; font-weight: 700; }
+    .setup input, .setup textarea {
+      width: 100%; height: 42px; padding: 0 12px;
+      border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+    }
+    .setup textarea { height: 88px; padding: 10px 12px; resize: vertical; }
+    .setup .hint { font-size: 12px; color: var(--faint); font-weight: 500; margin: 6px 0 0; }
+    .setup .actions { margin-top: 20px; display: flex; gap: 8px; }
+    .setup .msg { margin-top: 14px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap setup">
+    <p class="kicker"><a class="gh" href="index.html">모음으로</a></p>
+    <h1>관리자 설정</h1>
+    <p>모음 화면의 수정 버튼은 비밀번호로 토큰을 풀어 GitHub에 저장합니다. 이 페이지는 그 설정 파일(<code>admin.config.json</code>)을 만듭니다.</p>
+    <p>토큰은 <strong>이 저장소만</strong> Contents 읽기·쓰기인 Fine-grained PAT를 쓰세요. STATUS_TOKEN과 섞지 마세요.</p>
+    <form id="form">
+      <label>비밀번호
+        <input type="password" name="password" minlength="8" required autocomplete="new-password" />
+      </label>
+      <p class="hint">8자 이상. 사이트에 평문으로 올라가지 않습니다.</p>
+      <label>비밀번호 확인
+        <input type="password" name="confirm" minlength="8" required autocomplete="new-password" />
+      </label>
+      <label>GitHub 토큰
+        <textarea name="token" required placeholder="github_pat_..."></textarea>
+      </label>
+      <p class="hint">Fine-grained → 저장소 Hyungmo1234.github.io → Contents: Read and write</p>
+      <div class="actions">
+        <button class="btn primary" type="submit">설정 파일 만들기</button>
+      </div>
+      <p class="msg" id="msg" hidden></p>
+    </form>
+  </div>
+  <script src="admin.js"></script>
+  <script>
+    const form = document.getElementById("form");
+    const msg = document.getElementById("msg");
+    form.addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      const data = new FormData(form);
+      const password = String(data.get("password") || "");
+      const confirm = String(data.get("confirm") || "");
+      const token = String(data.get("token") || "").trim();
+      msg.hidden = false;
+      if (password !== confirm) {
+        msg.textContent = "비밀번호 확인이 다릅니다.";
+        return;
+      }
+      if (!token.startsWith("ghp_") && !token.startsWith("github_pat_")) {
+        msg.textContent = "GitHub 토큰처럼 보이지 않습니다.";
+        return;
+      }
+      try {
+        const config = await HMAdmin.encryptSecret(password, { token });
+        const blob = new Blob([JSON.stringify(config, null, 2) + "\n"], { type: "application/json" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "admin.config.json";
+        a.click();
+        msg.textContent = "admin.config.json을 저장소 루트에 두고 올리면 됩니다.";
+      } catch (err) {
+        msg.textContent = err.message || String(err);
+      }
+    });
+  </script>
+</body>
+</html>
