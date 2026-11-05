@@ -86,7 +86,7 @@
           </label>
         </div>
         <div data-pane="inbox" hidden>
-          <div id="inbox-list" class="inbox-list">불러오는 중…</div>
+          <div id="inbox-list" class="inbox-list">비밀번호를 입력한 뒤 조회를 눌러 주세요.</div>
         </div>
         <p class="edit-msg" id="edit-msg" hidden></p>
         <div class="modal-actions">
@@ -299,10 +299,14 @@
         pane.hidden = pane.dataset.pane !== mode;
       });
       const pw = form.password;
-      if (window.HMAdmin && HMAdmin.tokenReady) pw.required = false;
+      if (window.HMAdmin && HMAdmin.token) pw.required = false;
       const submit = form.querySelector("[type=submit]");
-      submit.hidden = mode === "inbox";
-      if (mode === "inbox") renderInbox();
+      submit.hidden = false;
+      submit.textContent = mode === "inbox" ? "조회" : "저장";
+      if (mode === "inbox") {
+        if (HMAdmin.token) renderInbox();
+        else document.getElementById("inbox-list").textContent = "비밀번호를 입력한 뒤 조회를 눌러 주세요.";
+      }
     }
 
     function showMsg(text, ok) {
@@ -357,7 +361,12 @@
         await HMAdmin.unlockAdmin(form.password.value);
         HMAdmin.tokenReady = true;
         form.password.required = false;
-        if (editMode === "inbox") return;
+        form.password.closest("label").hidden = true;
+        if (editMode === "inbox") {
+          await renderInbox();
+          showMsg("요청 내역을 불러왔습니다.", true);
+          return;
+        }
         if (editMode === "edit") {
           if (!editTarget) throw new Error("바로 수정은 카드에서 열어 주세요.");
           await HMAdmin.saveProjectEdit(editTarget.id, {

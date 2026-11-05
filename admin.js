@@ -180,6 +180,7 @@ async function saveWish(project, wish, statusLine) {
 }
 
 async function listInbox() {
+  if (!admin.token) throw new Error("비밀번호를 먼저 입력해 주세요.");
   const headers = { Accept: "application/vnd.github+json" };
   if (admin.token) headers.Authorization = "Bearer " + admin.token;
   const res = await fetch(
