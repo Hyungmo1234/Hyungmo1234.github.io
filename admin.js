@@ -179,26 +179,39 @@ async function saveWish(project, wish, statusLine) {
   return path;
 }
 
+async function ghRaw(path) {
+  const res = await fetch("https://api.github.com" + path, {
+    headers: {
+      Accept: "application/vnd.github.raw",
+      Authorization: "Bearer " + admin.token,
+      "X-GitHub-Api-Version": "2022-11-28"
+    }
+  });
+  if (!res.ok) throw new Error("GitHub " + res.status);
+  return res.text();
+}
+
 async function listInbox() {
   if (!admin.token) throw new Error("비밀번호를 먼저 입력해 주세요.");
-  const headers = { Accept: "application/vnd.github+json" };
-  if (admin.token) headers.Authorization = "Bearer " + admin.token;
-  const res = await fetch(
-    `https://api.github.com/repos/${ADMIN_REPO}/contents/inbox?ref=${ADMIN_BRANCH}`,
-    { headers }
-  );
-  const files = await res.json();
+  let files;
+  try {
+    files = await ghJson(`/repos/${ADMIN_REPO}/contents/inbox?ref=${ADMIN_BRANCH}`);
+  } catch (err) {
+    if (String(err.message || "").includes("Not Found")) return [];
+    throw err;
+  }
   if (!Array.isArray(files)) {
     throw new Error((files && files.message) || "요청 목록을 못 읽었습니다.");
   }
   const items = [];
   for (const file of files.filter((f) => f.name.endsWith(".md"))) {
-    const raw = await fetch(file.download_url);
-    if (!raw.ok) continue;
+    const text = await ghRaw(
+      `/repos/${ADMIN_REPO}/contents/${encodeURIComponent(file.path).replace(/%2F/g, "/")}?ref=${ADMIN_BRANCH}`
+    );
     items.push({
       name: file.name,
       path: file.path,
-      text: await raw.text(),
+      text,
       url: file.html_url
     });
   }
@@ -213,5 +226,8 @@ window.HMAdmin = {
   unlockAdmin,
   saveProjectEdit,
   saveWish,
-  listInbox
+  listInbox,
+  get unlocked() {
+    return !!admin.token;
+  }
 };
