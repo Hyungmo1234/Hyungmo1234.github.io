@@ -450,7 +450,9 @@ h1 {
   font-size: 18px;
 }
 .edit-tabs { display: flex; gap: 4px; margin: 0 0 14px; }
+.edit-tabs[hidden] { display: none; }
 .edit-tabs .chip { height: 32px; }
+.edit-tabs .chip[hidden] { display: none; }
 #edit-form label {
   display: block;
   margin: 0 0 12px;

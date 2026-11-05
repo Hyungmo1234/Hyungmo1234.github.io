@@ -60,8 +60,8 @@
   <div class="modal" id="edit-modal" hidden>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="edit-title">
       <h2 id="edit-title">수정</h2>
-      <div class="edit-tabs">
-        <button type="button" class="chip" data-mode="edit" aria-pressed="true">바로 수정</button>
+      <div class="edit-tabs" id="edit-tabs">
+        <button type="button" class="chip" data-mode="edit" aria-pressed="true">수정</button>
         <button type="button" class="chip" data-mode="wish" aria-pressed="false">이렇게 고쳤으면</button>
         <button type="button" class="chip" data-mode="inbox" aria-pressed="false">요청 내역</button>
       </div>
@@ -310,6 +310,15 @@
       }
     }
 
+    function setScope(scope) {
+      const tabs = document.getElementById("edit-tabs");
+      modal.querySelectorAll("[data-mode]").forEach((btn) => {
+        const forProject = btn.dataset.mode === "edit";
+        btn.hidden = scope === "project" ? !forProject : forProject;
+      });
+      tabs.hidden = scope === "project";
+    }
+
     function setMode(mode) {
       editMode = mode;
       modal.querySelectorAll("[data-mode]").forEach((btn) => {
@@ -336,22 +345,23 @@
 
     function openEditor(project) {
       editTarget = project || null;
-      titleEl.textContent = project ? project.name : "사이트";
+      titleEl.textContent = project ? project.name : "관리";
       form.reset();
       applyPasswordState();
       if (project) {
         form.name.value = project.name || "";
         form.blurb.value = project.blurb || "";
         form.note.value = project.note || "";
+        setScope("project");
+        setMode("edit");
+      } else {
+        setScope("admin");
+        setMode("wish");
       }
-      const job = project && project.job && state.status.jobs && state.status.jobs[project.job];
-      setMode(job && job.state === "bad" ? "wish" : (project ? "edit" : "inbox"));
-      if (!project) setMode("inbox");
       msgEl.hidden = true;
       modal.hidden = false;
-      (adminUnlocked() || form.password.value
-        ? form.querySelector("[name=wish], [name=name]")
-        : form.password).focus();
+      const focusField = project ? form.name : form.wish;
+      (adminUnlocked() ? focusField : form.password).focus();
     }
 
     document.getElementById("admin-open").addEventListener("click", () => openEditor(null));
