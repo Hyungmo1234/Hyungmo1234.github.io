@@ -484,6 +484,33 @@ h1 {
   justify-content: flex-end;
   gap: 8px;
 }
+.inbox-list { max-height: 52vh; overflow: auto; }
+.inbox-item {
+  margin: 0 0 14px;
+  padding: 12px;
+  background: var(--fill);
+  border-radius: 10px;
+}
+.inbox-item:last-child { margin-bottom: 0; }
+.inbox-name {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--faint);
+}
+.inbox-item pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.inbox-reply-label {
+  margin: 12px 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--forest);
+}
 
 @media (max-width: 640px) {
   .wrap { width: min(100% - 28px, 1080px); padding-top: 32px; }

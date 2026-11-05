@@ -179,11 +179,38 @@ async function saveWish(project, wish, statusLine) {
   return path;
 }
 
+async function listInbox() {
+  const headers = { Accept: "application/vnd.github+json" };
+  if (admin.token) headers.Authorization = "Bearer " + admin.token;
+  const res = await fetch(
+    `https://api.github.com/repos/${ADMIN_REPO}/contents/inbox?ref=${ADMIN_BRANCH}`,
+    { headers }
+  );
+  const files = await res.json();
+  if (!Array.isArray(files)) {
+    throw new Error((files && files.message) || "요청 목록을 못 읽었습니다.");
+  }
+  const items = [];
+  for (const file of files.filter((f) => f.name.endsWith(".md"))) {
+    const raw = await fetch(file.download_url);
+    if (!raw.ok) continue;
+    items.push({
+      name: file.name,
+      path: file.path,
+      text: await raw.text(),
+      url: file.html_url
+    });
+  }
+  items.sort((a, b) => b.name.localeCompare(a.name));
+  return items;
+}
+
 window.HMAdmin = {
   encryptSecret,
   decryptSecret,
   loadAdminConfig,
   unlockAdmin,
   saveProjectEdit,
-  saveWish
+  saveWish,
+  listInbox
 };
