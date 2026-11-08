@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T04:05+09:00",
+  "checkedAt": "2026-11-09T07:51+09:00",
   "ok": true,
   "summary": "스케줄 모두 정상",
   "jobs": {
@@ -9,9 +9,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-09 00:42 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42496039960",
-      "at": "2026-11-08T15:42:03Z",
+      "summary": "11-09 04:58 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42517605839",
+      "at": "2026-11-08T19:58:25Z",
       "web": {
         "ok": true,
         "code": 200
@@ -23,9 +23,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-09 03:54 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42512235841",
-      "at": "2026-11-08T18:54:15Z"
+      "summary": "11-09 07:39 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42531268423",
+      "at": "2026-11-08T22:39:28Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -33,9 +33,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-09 03:03 성공",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/42507938944",
-      "at": "2026-11-08T18:03:10Z"
+      "summary": "11-09 05:44 성공",
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/42521554415",
+      "at": "2026-11-08T20:44:13Z"
     },
     "daily-house": {
       "id": "daily-house",
