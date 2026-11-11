@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-11T09:37+09:00",
+  "checkedAt": "2026-11-11T16:08+09:00",
   "ok": true,
   "summary": "스케줄 모두 정상",
   "jobs": {
@@ -9,9 +9,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-11 08:34 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42924280425",
-      "at": "2026-11-10T23:34:18Z",
+      "summary": "11-11 11:57 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42949409570",
+      "at": "2026-11-11T02:57:47Z",
       "web": {
         "ok": true,
         "code": 200
@@ -23,19 +23,19 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-11 07:50 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42918068637",
-      "at": "2026-11-10T22:50:11Z"
+      "summary": "11-11 11:19 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/42945076898",
+      "at": "2026-11-11T02:19:00Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
       "name": "매일하루일본어",
       "ok": true,
-      "state": "wait",
-      "label": "실행 중",
-      "summary": "11-11 09:33 돌아가는 중",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/42932294502",
-      "at": "2026-11-11T00:33:39Z"
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-11 16:05 성공",
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/42976798131",
+      "at": "2026-11-11T07:05:08Z"
     },
     "daily-house": {
       "id": "daily-house",
@@ -43,9 +43,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-11 00:42 성공",
-      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/42845589609",
-      "at": "2026-11-10T15:42:20Z",
+      "summary": "11-11 15:08 오늘 치 이미 발행 · 이후 실행은 생략",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/42970285262",
+      "at": "2026-11-11T06:08:12Z",
       "web": {
         "ok": true,
         "code": 200
