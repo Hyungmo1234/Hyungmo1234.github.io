@@ -1,17 +1,17 @@
 {
-  "checkedAt": "2026-11-14T01:13+09:00",
+  "checkedAt": "2026-11-14T07:08+09:00",
   "ok": false,
-  "summary": "이상 매일하루영단어 (마지막 성공 11-13 17:11 · 이후 슬롯이 안 보임), 매일하루영단어 (일본인) (마지막 성공 11-13 17:10 · 이후 슬롯이 안 보임), 매일하루일본어 (유튜브 로그인 갱신에 실패했습니다.)",
+  "summary": "이상 매일하루일본어 (유튜브 로그인 갱신에 실패했습니다.)",
   "jobs": {
     "daily-english": {
       "id": "daily-english",
       "name": "매일하루영단어",
-      "ok": false,
-      "state": "wait",
-      "label": "지연",
-      "summary": "마지막 성공 11-13 17:11 · 이후 슬롯이 안 보임",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43391121887",
-      "at": "2026-11-13T08:11:45Z",
+      "ok": true,
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-14 07:00 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43515426661",
+      "at": "2026-11-13T22:00:20Z",
       "web": {
         "ok": true,
         "code": 200
@@ -20,12 +20,12 @@
     "daily-english-ja": {
       "id": "daily-english-ja",
       "name": "매일하루영단어 (일본인)",
-      "ok": false,
-      "state": "wait",
-      "label": "지연",
-      "summary": "마지막 성공 11-13 17:10 · 이후 슬롯이 안 보임",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43391064135",
-      "at": "2026-11-13T08:10:29Z"
+      "ok": true,
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-14 07:00 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43515573674",
+      "at": "2026-11-13T22:00:53Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -34,8 +34,8 @@
       "state": "bad",
       "label": "이상",
       "summary": "유튜브 로그인 갱신에 실패했습니다.",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43459830106",
-      "at": "2026-11-13T16:10:37Z"
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43516414450",
+      "at": "2026-11-13T22:06:53Z"
     },
     "daily-house": {
       "id": "daily-house",
