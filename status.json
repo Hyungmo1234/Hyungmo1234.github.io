@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-15T17:25+09:00",
+  "checkedAt": "2026-11-16T00:51+09:00",
   "ok": false,
   "summary": "이상 매일하루일본어 (유튜브 로그인 갱신에 실패했습니다.)",
   "jobs": {
@@ -9,9 +9,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-15 12:08 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43670893751",
-      "at": "2026-11-15T03:08:24Z",
+      "summary": "11-15 19:46 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43705616898",
+      "at": "2026-11-15T10:46:52Z",
       "web": {
         "ok": true,
         "code": 200
@@ -23,9 +23,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-15 12:13 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43671310457",
-      "at": "2026-11-15T03:13:34Z"
+      "summary": "11-15 20:08 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43707384584",
+      "at": "2026-11-15T11:08:45Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -34,18 +34,18 @@
       "state": "bad",
       "label": "이상",
       "summary": "유튜브 로그인 갱신에 실패했습니다.",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43688641538",
-      "at": "2026-11-15T07:10:16Z"
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43730777742",
+      "at": "2026-11-15T15:37:07Z"
     },
     "daily-house": {
       "id": "daily-house",
       "name": "데일리하우스",
       "ok": true,
-      "state": "ok",
-      "label": "정상",
-      "summary": "11-15 15:21 오늘 치 이미 발행 · 이후 실행은 생략",
-      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/43685081706",
-      "at": "2026-11-15T06:21:53Z",
+      "state": "wait",
+      "label": "대기",
+      "summary": "오늘 실행 아직 없음 · 마지막은 11-15 23:43",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/43725898452",
+      "at": "2026-11-15T14:43:31Z",
       "web": {
         "ok": true,
         "code": 200
