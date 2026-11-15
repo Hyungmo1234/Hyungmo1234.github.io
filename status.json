@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-15T06:24+09:00",
+  "checkedAt": "2026-11-15T10:17+09:00",
   "ok": false,
   "summary": "이상 매일하루일본어 (유튜브 로그인 갱신에 실패했습니다.)",
   "jobs": {
@@ -9,9 +9,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-15 04:59 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43634970087",
-      "at": "2026-11-14T19:59:45Z",
+      "summary": "11-15 08:47 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43654881167",
+      "at": "2026-11-14T23:47:27Z",
       "web": {
         "ok": true,
         "code": 200
@@ -23,9 +23,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-15 05:05 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43635446833",
-      "at": "2026-11-14T20:05:05Z"
+      "summary": "11-15 08:52 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43655306134",
+      "at": "2026-11-14T23:52:44Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -34,8 +34,8 @@
       "state": "bad",
       "label": "이상",
       "summary": "유튜브 로그인 갱신에 실패했습니다.",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43639820546",
-      "at": "2026-11-14T20:53:55Z"
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43656832307",
+      "at": "2026-11-15T00:11:29Z"
     },
     "daily-house": {
       "id": "daily-house",
@@ -43,9 +43,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-15 04:11 성공",
-      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/43630432166",
-      "at": "2026-11-14T19:11:00Z",
+      "summary": "11-15 10:04 오늘 치 이미 발행 · 이후 실행은 생략",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/43661307852",
+      "at": "2026-11-15T01:04:35Z",
       "web": {
         "ok": true,
         "code": 200
