@@ -529,3 +529,102 @@ h1 {
   .wrap { padding: 0; width: auto; }
   header.top { border: 0; margin-bottom: 16px; padding-bottom: 0; }
 }
+
+/* 소개 문단 · 이번 주 작업 · 카드 지표/스택 */
+.lede {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.weekly {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 0 0 24px;
+}
+.weekly[hidden] { display: none; }
+.weekly-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.weekly-title span {
+  margin-left: 6px;
+  color: var(--faint);
+  font-size: 13px;
+  font-weight: 500;
+}
+.weekly-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.highlights {
+  margin: -6px 0 12px;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.highlights li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 3px;
+}
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent, var(--forest));
+}
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0 0 14px;
+}
+.stack span {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+.resume .bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.resume .jobs .bullets li {
+  padding: 0;
+  border-bottom: 0;
+  margin-bottom: 4px;
+}
+.resume .core {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.resume .core li { margin-bottom: 6px; }
+.resume .core strong { font-weight: 700; }
+.resume .stackline {
+  margin: 6px 0 0;
+  color: var(--faint);
+  font-size: 12.5px;
+}

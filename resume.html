@@ -57,6 +57,15 @@
         <p>마지막 0.09%를 채우기 위한 과정에 비해 보상이 작아 보일 수 있습니다. 그럼에도 타협하지 않고, 일정이 허락하는 한 99.999%를 향해 나아갈 수 있도록 끊임없이 팀을 설득할 것입니다.</p>
       </div>
 
+      <h2>핵심 역량</h2>
+      <ul class="core">
+        <li><strong>웹 시스템 개발·운영 8년</strong> — 2019년부터 Java·Spring 기반 웹과 마이데이터 API 솔루션을 개발했고, 2021년부터 행정안전부·문화체육관광부·경찰청·서울시 등 공공기관 시스템의 개발·고도화·유지보수를 맡고 있습니다. 2025년부터는 PL·PM으로 프로젝트를 이끕니다.</li>
+        <li><strong>데이터 파이프라인 설계</strong> — 공공 API 5종 이상을 RAW → CLEAN → PostgreSQL로 정제·적재하는 ETL을 직접 설계해, 서울·경기 아파트 매매 실거래 311만 건을 쌓았습니다(Prophecy).</li>
+        <li><strong>머신러닝 모델링·검증</strong> — 시간 분할 검증으로 기준선(직전 중위가 유지)과 RF·XGBoost·LightGBM을 비교하고, 피처를 한 번에 하나씩 넣어 효과를 확인합니다. 12개월 예측 MAE를 기준선 대비 38% 줄였습니다.</li>
+        <li><strong>자동화·운영</strong> — GitHub Actions 스케줄로 뉴스 브리핑·유튜브 숏츠·인스타그램을 매일 자동 발행하고, 실행 상태를 30분마다 모아 이 사이트에 표시합니다.</li>
+        <li><strong>AI를 도구로 쓰는 개발 방식</strong> — Cursor·LLM으로 먼저 끝까지 만들고, 결과물을 코드와 배경지식으로 다시 해부해 기록합니다.</li>
+      </ul>
+
       <h2>기술</h2>
       <h3 class="sub">주력</h3>
       <ul class="skills">
@@ -72,6 +81,15 @@
       <h3 class="sub">그 외</h3>
       <ul class="skills">
         <li>FastAPI</li>
+        <li>Next.js</li>
+        <li>Tailwind CSS</li>
+        <li>Vite</li>
+        <li>Docker</li>
+        <li>Vercel</li>
+        <li>pytest</li>
+        <li>pandas</li>
+        <li>NumPy</li>
+        <li>Jupyter</li>
         <li>GitHub Actions</li>
         <li>PWA</li>
         <li>Fly.io</li>
@@ -82,9 +100,12 @@
         <li>Spring Boot</li>
         <li>JPA</li>
         <li>PostgreSQL</li>
+        <li>pg_trgm GIN 인덱스</li>
         <li>scikit-learn</li>
         <li>XGBoost</li>
         <li>LightGBM</li>
+        <li>Random Forest</li>
+        <li>시간 분할 검증</li>
         <li>Jinja2</li>
         <li>Pillow</li>
         <li>규칙 기반 관련성 점수</li>
@@ -107,6 +128,8 @@
         <li>네이버 뉴스 API</li>
         <li>YouTube API</li>
         <li>OpenAI</li>
+        <li>Instagram Graph API</li>
+        <li>법제처 행정규칙 API</li>
       </ul>
 
       <h2>경력</h2>
@@ -190,53 +213,80 @@
       <h2>개인 프로젝트</h2>
       <ul class="jobs">
         <li>
-          <h3>매일하루영단어</h3>
-          <p>하루 한 장의 영단어·숙어 웹앱. PWA로 폰에서 공부하고, GitHub Actions로 유튜브 숏츠를 올립니다.</p>
-          <p class="links">
-            <a href="https://daily-english-hyungmo.fly.dev" target="_blank" rel="noopener">웹 앱</a>
-            <a href="https://www.youtube.com/channel/UCIBCHpm-Y71wkQBVet9wXzw" target="_blank" rel="noopener">YouTube</a>
-          </p>
+          <h3>Prophecy · AI 부동산 인텔리전스 플랫폼</h3>
+          <p>공공 원천 데이터만으로 아파트의 현재 가치와 3·6·12개월 가격 전망을 보여 주는 플랫폼입니다. 2026.09 시작, 비공개 저장소.</p>
+          <ul class="bullets">
+            <li>국토부 실거래·K-APT 단지·청약홈·한국은행 ECOS·VWorld 입지·법제처 고시를 수집기 → RAW → CLEAN → PostgreSQL 16으로 정제·적재하는 ETL 설계</li>
+            <li>서울·경기 매매 실거래 311만 건(2011-12~2026-09)·분양권 27만 건·8,632단지·청약 공고 1,102건 구축. 과거 데이터는 한 달씩 거꾸로 받는 백필 루프로 확장하고, 대용량 적재는 스트리밍으로 바꿔 메모리 부족 해결</li>
+            <li>단지·월 중위가 예측을 시간 분할로 검증. 기준선 대비 MAE 3개월 −14%(7,986만 → 6,875만 원), 6개월 −22%, 12개월 −38%(1억 3,359만 → 8,267만 원)</li>
+            <li>피처 버전 v89까지 거래 구조·청약 공급·금리·물가·입지·토지이용 규제를 하나씩 넣고 검증. 효과가 없거나 표본이 작은 항목은 근거를 남기고 제외</li>
+            <li>Spring Boot API(검색·단지 상세·고점 추적)와 React·TypeScript 웹. pg_trgm GIN 인덱스와 COUNT 없는 페이징으로 검색 지연을 줄이고, 390px 모바일 화면까지 검증</li>
+          </ul>
+          <p class="stackline">Python · PostgreSQL · XGBoost · LightGBM · scikit-learn · Spring Boot · React · TypeScript</p>
         </li>
         <li>
-          <h3>매일하루영단어 (일본인)</h3>
-          <p>일본인을 위한 영단어·숙어 웹앱. 뜻과 예문을 일본어로 보고, GitHub Actions로 毎日英単語 숏츠를 올립니다.</p>
-          <p class="links">
-            <a href="https://daily-english-hyungmo.fly.dev/#ja" target="_blank" rel="noopener">웹 앱</a>
-            <a href="https://www.youtube.com/channel/UCVguZaN1HSqr8uhzFE4momQ" target="_blank" rel="noopener">YouTube</a>
-          </p>
-        </li>
-        <li>
-          <h3>매일하루일본어</h3>
-          <p>일본어 단어·숙어 학습 웹앱. 히라가나 후리가나와 유튜브 채널 발행을 붙였습니다.</p>
-          <p class="links">
-            <a href="https://daily-nihongo-hyungmo.fly.dev" target="_blank" rel="noopener">웹 앱</a>
-            <a href="https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg" target="_blank" rel="noopener">YouTube</a>
-          </p>
-        </li>
-        <li>
-          <h3>데일리하우스</h3>
-          <p>네이버 뉴스를 모아 규칙 기반 관련성 점수·카테고리 분류로 거르고, 제목 바이그램 Jaccard와 SequenceMatcher로 1차 중복을 뺍니다. 같은 사건은 LLM으로 묶어 병합한 뒤, 관련성·중복 매체·주요 언론 가중으로 랭킹하고 OpenAI로 요약·중요도를 매깁니다. GitHub Pages와 인스타 카드(Pillow)로 발행합니다.</p>
+          <h3>데일리하우스 · 부동산 뉴스 자동 브리핑</h3>
+          <p>매일 아침 부동산 뉴스를 모아 거르고, 묶고, 요약해 웹과 인스타그램에 자동 발행합니다.</p>
+          <ul class="bullets">
+            <li>네이버 뉴스 7개 키워드 수집 → 규칙 기반 관련성 점수·카테고리 분류 → 제목 바이그램 Jaccard·SequenceMatcher로 1차 중복 제거 → LLM 사건 클러스터링으로 같은 사건 병합</li>
+            <li>관련성·여러 매체 보도·주요 매체 가중으로 랭킹한 뒤 OpenAI로 요약·중요도 산정, Jinja2 정적 페이지와 Pillow 인스타 카드 생성</li>
+            <li>2026.10.27부터 21회 연속 매일 발행. 원문 3,392건 중 597건만 선별(약 82% 제거). 최근 워크플로 실행 85회 중 84회 성공</li>
+            <li>GitHub Actions 일정 실행 + 당일 발행 여부를 먼저 확인하는 게이트로 재시도해도 중복 발행되지 않게 설계</li>
+          </ul>
           <p class="links">
             <a href="https://hyungmo1234.github.io/daily-house/" target="_blank" rel="noopener">뉴스 페이지</a>
+            <a href="https://github.com/Hyungmo1234/daily-house" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.instagram.com/penguin.91557373/" target="_blank" rel="noopener">Instagram</a>
           </p>
         </li>
         <li>
-          <h3>Prophecy</h3>
-          <p>공공 원천 데이터로 아파트 현재 가치와 가격 전망을 보는 AI 부동산 인텔리전스 플랫폼입니다. 국토부 실거래·K-APT 단지·청약홈·한국은행 ECOS·VWorld 입지를 RAW로 모아 CLEAN으로 정제한 뒤 PostgreSQL에 넣고, 서울·경기 단지 검색·실거래 조회와 XGBoost·LightGBM 예측을 Spring Boot API와 React 웹에 붙였습니다.</p>
+          <h3>매일하루 시리즈 · 영단어 / 일본인용 영단어 / 일본어</h3>
+          <p>하루 한 장의 단어·숙어 카드를 PWA로 공부하고, 같은 카드를 유튜브 숏츠로 자동 발행하는 학습 앱 세 개입니다.</p>
+          <ul class="bullets">
+            <li>FastAPI 백엔드 + Vite PWA 프론트를 Docker로 묶어 Fly.io에 배포. 카드 생성·사전·발음 API와 미리 만든 카드 풀</li>
+            <li>GitHub Actions가 10분 간격으로 발행 슬롯을 확인해 숏츠를 렌더링·업로드(일본어는 하루 6슬롯, 놓치면 30분 뒤 재시도)</li>
+            <li>한 코드베이스에서 언어별 카드·채널을 분기해 일본인용 영단어 채널까지 확장. 발행 기록 영어 87건·일본어 83건</li>
+            <li>카드·발행 슬롯·일정·후리가나 등을 pytest로 검증</li>
+          </ul>
+          <p class="links">
+            <a href="https://daily-english-hyungmo.fly.dev" target="_blank" rel="noopener">영단어 앱</a>
+            <a href="https://www.youtube.com/channel/UCIBCHpm-Y71wkQBVet9wXzw" target="_blank" rel="noopener">영단어 YouTube</a>
+            <a href="https://daily-english-hyungmo.fly.dev/#ja" target="_blank" rel="noopener">일본인용 앱</a>
+            <a href="https://www.youtube.com/channel/UCVguZaN1HSqr8uhzFE4momQ" target="_blank" rel="noopener">毎日英単語 YouTube</a>
+            <a href="https://daily-nihongo-hyungmo.fly.dev" target="_blank" rel="noopener">일본어 앱</a>
+            <a href="https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg" target="_blank" rel="noopener">일본어 YouTube</a>
+          </p>
         </li>
         <li>
-          <h3>강의 녹음 툴</h3>
-          <p>수업 마이크·휴대폰 녹음을 Whisper로 받아쓰고, Cursor로 강의 노트를 정리합니다.</p>
+          <h3>프로젝트 모음 사이트 · 운영 상태 대시보드</h3>
+          <p>이 사이트입니다. 저장소 목록 대신 프로젝트별 웹·Git·채널을 한 페이지에 모았습니다.</p>
+          <ul class="bullets">
+            <li>GitHub Actions가 30분마다 각 자동 발행 작업의 최근 실행과 웹 응답을 모아 status.json으로 커밋하고, 카드와 상단 배너에 정상·대기·이상을 표시</li>
+            <li>PBKDF2 + AES-GCM으로 암호화한 토큰을 비밀번호로 풀어 GitHub Contents API로 카드 문구를 바로 수정하는 관리 창</li>
+          </ul>
+        </li>
+        <li>
+          <h3>강의 녹음 툴 · 강의 단어</h3>
+          <p>수업 마이크·휴대폰 녹음을 Whisper로 받아쓰고 Cursor로 강의 노트를 정리합니다. 강의 단어는 모르는 단어를 그 수업의 맥락으로 물어보고, 질문과 답을 날짜별 노트로 저장해 Git에 올립니다.</p>
         </li>
         <li>
           <h3>형모 Cursor Desk</h3>
           <p>Cursor SDK를 쓰는 Windows 데스크톱 채팅 앱. 세션, 첨부, 로컬 에이전트 작업을 한 창에서 합니다.</p>
         </li>
         <li>
+          <h3>파이썬·AI 공부 기록</h3>
+          <p>파이썬 기초부터 NumPy·통계·전처리·머신러닝까지 날짜 폴더로 쌓고, Windows 작업 스케줄러가 전날 작업을 모아 일일 노트를 쓰고 자동 push합니다. AICE 모의고사(학생성적 예측)도 여기서 풀었습니다.</p>
+          <p class="links">
+            <a href="https://github.com/Hyungmo1234/261015python" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </li>
+        <li>
           <h3>모바일 청첩장</h3>
-          <p>2026년 5월, 결혼을 위해 TypeScript·Next.js로 직접 만들고 Vercel에 띄운 모바일 청첩장.</p>
-          <p><a href="https://mobile-invitation-by-cursor.vercel.app" target="_blank" rel="noopener">웹 열기</a></p>
+          <p>2026년 5월, 결혼을 위해 Next.js 14·TypeScript·Tailwind로 직접 만들고 Vercel에 띄운 모바일 청첩장. 갤러리, 지도, 방명록 API, 카카오톡 공유, QR 코드를 구현했습니다.</p>
+          <p class="links">
+            <a href="https://mobile-invitation-by-cursor.vercel.app" target="_blank" rel="noopener">웹 열기</a>
+            <a href="https://github.com/Hyungmo1234/mobile_invitationByCursor" target="_blank" rel="noopener">GitHub</a>
+          </p>
         </li>
       </ul>
     </article>

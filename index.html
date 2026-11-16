@@ -26,8 +26,14 @@
         </span>
       </p>
       <h1>개인 프로젝트 모음</h1>
+      <p class="lede">공공기관 SI·SM을 중심으로 8년 동안 웹 시스템을 만들고 지켜 온 개발자가, 이제는 데이터 파이프라인·머신러닝·자동 발행을 직접 설계해 매일 돌립니다. 카드마다 풀려던 문제, 구조, 기술, 확인된 숫자를 적었습니다.</p>
       <p class="run-banner" id="run-banner" hidden></p>
     </header>
+
+    <section class="weekly" id="weekly" aria-labelledby="weekly-title" hidden>
+      <h2 class="weekly-title" id="weekly-title">이번 주 작업 <span id="weekly-range"></span></h2>
+      <ul class="weekly-list" id="weekly-list"></ul>
+    </section>
 
     <div class="toolbar">
       <div class="chips" role="tablist" aria-label="종류">
@@ -36,7 +42,7 @@
         <button class="chip" data-kind="tool" aria-pressed="false">로컬 도구</button>
         <button class="chip" data-kind="study" aria-pressed="false">공부</button>
       </div>
-      <input class="search" type="search" placeholder="이름, 설명, 저장소 검색" aria-label="검색" />
+      <input class="search" type="search" placeholder="이름, 설명, 기술 검색" aria-label="검색" />
     </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
@@ -155,7 +161,7 @@
     function matches(p) {
       if (state.kind !== "all" && p.kind !== state.kind) return false;
       if (!state.q) return true;
-      const blob = [p.name, p.blurb, p.gitName, p.note].join(" ").toLowerCase();
+      const blob = [p.name, p.blurb, p.gitName, p.note, (p.stack || []).join(" ")].join(" ").toLowerCase();
       return blob.includes(state.q);
     }
 
@@ -200,6 +206,8 @@
               </div>
             </div>
             <p class="blurb">${esc(p.blurb)}</p>
+            ${(p.highlights || []).length ? `<ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
+            ${(p.stack || []).length ? `<div class="stack">${p.stack.map((t) => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
             ${statusBlock(p)}
             ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
             <div class="actions">${buttons.join("")}</div>
@@ -207,11 +215,21 @@
       }).join("");
     }
 
+    function renderWeekly() {
+      const week = (state.catalog.weekly || [])[0];
+      const box = document.getElementById("weekly");
+      if (!week || !(week.items || []).length) { box.hidden = true; return; }
+      document.getElementById("weekly-range").textContent = week.week || "";
+      document.getElementById("weekly-list").innerHTML = week.items.map((x) => `<li>${esc(x)}</li>`).join("");
+      box.hidden = false;
+    }
+
     async function boot() {
       try {
         const res = await fetch("projects.json", { cache: "no-store" });
         if (res.ok) state.catalog = await res.json();
       } catch (_) { /* file:// 로 열면 JSON을 못 읽을 수 있음 */ }
+      renderWeekly();
       render();
       try {
         const res = await fetch("status.json", { cache: "no-store" });

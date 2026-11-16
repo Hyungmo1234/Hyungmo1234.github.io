@@ -1,57 +1,93 @@
 {
   "title": "개인 프로젝트 모음",
   "githubUser": "Hyungmo1234",
-  "skipRepos": ["kkkk", "no", "Hyungmo1234", "Hyungmo1234.github.io"],
+  "skipRepos": [
+    "kkkk",
+    "no",
+    "Hyungmo1234",
+    "Hyungmo1234.github.io",
+    "ai-issue"
+  ],
   "projects": [
     {
       "id": "daily-english",
       "name": "매일하루영단어",
-      "blurb": "하루 한 장의 영단어·숙어. PWA로 폰 홈 화면에서 공부하고, 숏츠도 함께 올라갑니다.",
+      "blurb": "매일 공부할 거리를 '고르는 수고'를 없앴습니다. FastAPI가 날짜별 카드를 만들고 PWA로 폰 홈 화면에서 열며, GitHub Actions가 같은 카드를 유튜브 숏츠로 렌더링해 정해진 시각마다 올립니다.",
       "kind": "web",
       "accent": "#c9a227",
       "mark": "Aa",
       "web": "https://daily-english-hyungmo.fly.dev",
       "webLabel": "웹 앱",
-      "git": "https://github.com/Hyungmo1234/daily-english",
       "gitName": "daily-english",
       "job": "daily-english",
       "private": true,
       "youtube": "https://www.youtube.com/channel/UCIBCHpm-Y71wkQBVet9wXzw",
-      "note": "Fly.io · 절전 중이면 첫 접속이 몇 초 걸릴 수 있습니다"
+      "note": "Fly.io · 절전 중이면 첫 접속이 몇 초 걸릴 수 있습니다",
+      "stack": [
+        "FastAPI",
+        "Vite · PWA",
+        "Docker · Fly.io",
+        "GitHub Actions",
+        "YouTube Data API",
+        "pytest"
+      ],
+      "highlights": [
+        "2026-10-25 시작 · 발행 기록 87건",
+        "숏츠 발행 워크플로 실행 227회 중 211회 성공"
+      ]
     },
     {
       "id": "daily-english-ja",
       "name": "매일하루영단어 (일본인)",
-      "blurb": "일본인을 위한 영단어·숙어. 뜻과 예문을 일본어로 보고, 毎日英単語 숏츠도 함께 올라갑니다.",
+      "blurb": "같은 카드 파이프라인을 일본어 사용자용으로 갈래를 냈습니다. 뜻과 예문을 일본어로 번역해 보여 주고, 毎日英単語 채널로 별도 숏츠를 발행합니다.",
       "kind": "web",
       "accent": "#3d6b8a",
       "mark": "英",
       "web": "https://daily-english-hyungmo.fly.dev/#ja",
       "webLabel": "웹 앱",
-      "git": "https://github.com/Hyungmo1234/daily-english",
       "gitName": "daily-english",
       "job": "daily-english-ja",
       "private": true,
       "youtube": "https://www.youtube.com/channel/UCVguZaN1HSqr8uhzFE4momQ",
-      "note": "Fly.io · 절전 중이면 첫 접속이 몇 초 걸릴 수 있습니다"
+      "note": "Fly.io · 절전 중이면 첫 접속이 몇 초 걸릴 수 있습니다",
+      "stack": [
+        "FastAPI",
+        "PWA",
+        "GitHub Actions",
+        "YouTube Data API"
+      ],
+      "highlights": [
+        "한 코드베이스에서 언어별 카드·채널을 분기"
+      ]
     },
     {
       "id": "daily-nihongo",
       "name": "매일하루일본어",
-      "blurb": "하루 한 장의 일본어 단어·숙어. 히라가나 후리가나와 함께 보고, 유튜브에도 올립니다.",
+      "blurb": "영단어 앱 구조를 일본어 학습으로 옮겼습니다. 단어·숙어 카드에 히라가나 후리가나(ruby)를 붙이고, 서울 시간 하루 6개 슬롯으로 유튜브 숏츠를 자동 업로드합니다.",
       "kind": "web",
       "accent": "#c45c5c",
       "mark": "あ",
-      "git": "https://github.com/Hyungmo1234/daily-nihongo",
       "gitName": "daily-nihongo",
       "job": "daily-nihongo",
       "private": true,
-      "youtube": "https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg"
+      "youtube": "https://www.youtube.com/channel/UC8TVY1GZN0MPReRj0iiXjIg",
+      "stack": [
+        "FastAPI",
+        "Vite · PWA",
+        "Docker · Fly.io",
+        "GitHub Actions",
+        "YouTube Data API",
+        "pytest"
+      ],
+      "highlights": [
+        "하루 6슬롯 업로드 · 놓치면 30분 뒤 재시도",
+        "2026-10-26 시작 · 발행 기록 83건"
+      ]
     },
     {
       "id": "daily-house",
       "name": "데일리하우스",
-      "blurb": "매일 아침 자동으로 모으고 요약하는 부동산 뉴스 브리핑.",
+      "blurb": "흩어진 부동산 기사를 매일 아침 한 페이지로 받아보고 싶었습니다. 네이버 뉴스 7개 키워드를 수집해 규칙 점수·바이그램 Jaccard·LLM 사건 클러스터로 거르고 묶은 뒤, OpenAI 요약과 함께 GitHub Pages와 인스타그램에 자동 발행합니다.",
       "kind": "web",
       "accent": "#0E9F8E",
       "mark": "家",
@@ -61,16 +97,35 @@
       "gitName": "daily-house",
       "job": "daily-house",
       "private": false,
-      "instagram": "https://www.instagram.com/penguin.91557373/"
+      "instagram": "https://www.instagram.com/penguin.91557373/",
+      "stack": [
+        "Python",
+        "Naver News API",
+        "OpenAI",
+        "Jinja2",
+        "Pillow",
+        "GitHub Actions · Pages",
+        "Instagram Graph API"
+      ],
+      "highlights": [
+        "2026-10-27부터 21회 연속 매일 발행",
+        "원문 3,392건 → 597건 선별(중복·무관 기사 약 82% 제거)",
+        "최근 실행 85회 중 84회 성공"
+      ]
     },
     {
       "id": "lecture-kit",
       "name": "강의 녹음 툴",
-      "blurb": "수업 마이크·휴대폰 녹음을 받아쓰고, Cursor로 강의 노트를 정리합니다. 웹이 아니라 PC에서 실행합니다.",
+      "blurb": "수업을 듣는 동안 필기를 놓치는 문제를 풀려고 만들었습니다. 수업 마이크·휴대폰 녹음을 Whisper로 받아쓰고, Cursor로 강의 노트를 정리합니다. 웹이 아니라 PC에서 실행합니다.",
       "kind": "tool",
       "accent": "#6b8afd",
       "mark": "🎙",
-      "local": true
+      "local": true,
+      "stack": [
+        "Python",
+        "Whisper",
+        "Cursor"
+      ]
     },
     {
       "id": "hm-cursor-desk",
@@ -79,7 +134,11 @@
       "kind": "tool",
       "accent": "#f27d26",
       "mark": "▣",
-      "local": true
+      "local": true,
+      "stack": [
+        "Cursor SDK",
+        "Windows 데스크톱"
+      ]
     },
     {
       "id": "playchrome",
@@ -88,34 +147,90 @@
       "kind": "tool",
       "accent": "#3c9d64",
       "mark": "{ }",
-      "local": true
+      "local": true,
+      "stack": [
+        "Chrome Extension",
+        "JavaScript",
+        "CSS"
+      ]
     },
     {
       "id": "261015python",
       "name": "파이썬 공부",
-      "blurb": "파이썬 기초 연습과 매일 공부 노트. 날짜 폴더에 기록하고 자동으로 올립니다.",
+      "blurb": "파이썬 기초부터 NumPy·통계·전처리·머신러닝까지 날짜 폴더에 쌓는 공부 저장소. Windows 작업 스케줄러가 전날 작업을 모아 노트를 쓰고, 공부량이 있을 때만 자동 push합니다.",
       "kind": "study",
       "accent": "#3776ab",
       "mark": "Py",
       "git": "https://github.com/Hyungmo1234/261015python",
       "gitName": "261015python",
-      "private": false
+      "private": false,
+      "stack": [
+        "Python",
+        "NumPy",
+        "pandas",
+        "Jupyter",
+        "Windows 작업 스케줄러"
+      ],
+      "highlights": [
+        "2026-10-16 시작 · 커밋 32회 · 일일 노트 15편"
+      ]
+    },
+    {
+      "id": "lecture-words",
+      "name": "강의 단어",
+      "blurb": "수업 중 모르는 단어를 그 강의 맥락으로 바로 물어보는 도구. 수업 이름을 넣으면 자주 나오는 개념을 먼저 펼치고, 질문과 답을 날짜별 노트(md·json)로 저장해 Git에 올립니다.",
+      "kind": "tool",
+      "accent": "#1c3d38",
+      "mark": "단",
+      "git": "https://github.com/Hyungmo1234/Hyungmo1234.github.io/tree/main/lecture-words",
+      "local": true,
+      "stack": [
+        "Python http.server",
+        "Vanilla JS",
+        "Cursor API"
+      ]
+    },
+    {
+      "id": "aice-mock1",
+      "name": "AICE 모의고사 · 학생성적 예측",
+      "blurb": "AICE 자격 준비로 푼 모의고사 1회. 학생 인적 정보(CSV)와 과목 성적(JSON)을 합쳐 전처리하고 성적을 예측하는 문제를 노트북으로 풀었습니다.",
+      "kind": "study",
+      "accent": "#5a7d3a",
+      "mark": "AI",
+      "gitName": "aice-mock1-student-score",
+      "private": true,
+      "stack": [
+        "pandas",
+        "scikit-learn",
+        "Jupyter"
+      ]
     },
     {
       "id": "prophecy",
       "name": "Prophecy",
-      "blurb": "공공 실거래·단지·청약·거시·입지 데이터로 아파트 현재 가치와 가격 전망을 보는 AI 부동산 인텔리전스 플랫폼.",
+      "blurb": "'이 아파트, 지금 얼마이고 앞으로 어떨까'를 공공 원천 데이터만으로 답하는 AI 부동산 인텔리전스 플랫폼. 국토부 실거래·K-APT·청약홈·ECOS·VWorld를 RAW→CLEAN으로 정제해 PostgreSQL에 쌓고, 3·6·12개월 단지 중위가를 학습해 Spring Boot API와 React 웹으로 검색·평가·고점 추적을 제공합니다.",
       "kind": "study",
       "accent": "#7c5cbf",
       "mark": "P",
-      "git": "https://github.com/Hyungmo1234/prophecy",
       "gitName": "prophecy",
-      "private": true
+      "private": true,
+      "stack": [
+        "Python ETL",
+        "PostgreSQL 16 · pg_trgm",
+        "XGBoost · LightGBM",
+        "Spring Boot",
+        "React · TypeScript"
+      ],
+      "highlights": [
+        "서울·경기 매매 실거래 311만 건(2011-12~2026-09) · 8,632단지",
+        "시간 분할 검증 MAE: 12개월 예측에서 기준선 대비 38% 감소",
+        "2026-09 시작 · 커밋 333회"
+      ]
     },
     {
       "id": "mobile-invitation",
       "name": "모바일 청첩장",
-      "blurb": "2026년 5월, 결혼을 위해 TypeScript·Next.js로 직접 만들고 Vercel에 띄운 모바일 청첩장.",
+      "blurb": "2026년 5월, 결혼을 위해 직접 만든 모바일 청첩장. Next.js 14·TypeScript·Tailwind로 갤러리, 지도, 방명록 API, 카카오톡 공유, QR 코드를 구현하고 Vercel에 배포했습니다.",
       "kind": "web",
       "accent": "#e8a0bf",
       "mark": "✉",
@@ -123,7 +238,26 @@
       "webLabel": "웹 열기",
       "git": "https://github.com/Hyungmo1234/mobile_invitationByCursor",
       "gitName": "mobile_invitationByCursor",
-      "private": false
+      "private": false,
+      "stack": [
+        "Next.js 14",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vercel"
+      ]
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-11-09 ~ 11-16",
+      "items": [
+        "Prophecy: 2011-12~2012-02 실거래 역사 백필, 대용량 적재를 스트리밍으로 바꿔 메모리 부족(OOM) 해결",
+        "Prophecy: 모바일 v2 — 결과 우선 배치·아코디언 상세로 모바일 상세 높이 약 6,500→4,000px, 로딩·빈 결과·오류 안내 추가",
+        "데일리하우스: 11-09~11-16 8일 연속 자동 발행(봇 커밋 16회)",
+        "매일하루 시리즈: 영어·일본어 숏츠 자동 발행 커밋 59회",
+        "파이썬 공부: 공부기록을 월 폴더로 재정리, AICE 모의고사 1회(학생성적 예측) 풀이"
+      ]
     }
   ]
 }
