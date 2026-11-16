@@ -18,7 +18,7 @@ python -m http.server 5500
 
 | 프로젝트 | 무엇을 풀었나 | 기술 | 웹 | GitHub |
 |---|---|---|---|---|
-| Prophecy | 공공 원천 데이터로 아파트 현재 가치·3/6/12개월 전망. 서울·경기 실거래 311만 건, 12개월 예측 MAE 기준선 대비 −38% | Python ETL · PostgreSQL · XGBoost/LightGBM · Spring Boot · React | 로컬 | 비공개 |
+| Prophecy | 공공 원천 데이터로 아파트 현재 가치·3/6/12개월 전망. 서울·경기 실거래 311만 건, 12개월 예측 MAE 기준선 대비 −38% | Python ETL · PostgreSQL · XGBoost/LightGBM · Spring Boot · React | [웹 열기](https://hyungmo1234.github.io/prophecy-link/) | 비공개 |
 | 데일리하우스 | 매일 아침 부동산 뉴스 수집 → 중복·무관 기사 제거 → LLM 요약 → 자동 발행. 21회 연속 발행 | Python · OpenAI · Jinja2 · Pillow · GitHub Actions | [뉴스 페이지](https://hyungmo1234.github.io/daily-house/) | [daily-house](https://github.com/Hyungmo1234/daily-house) |
 | 매일하루영단어 | 하루 한 장 카드 PWA + 유튜브 숏츠 자동 발행 | FastAPI · Vite PWA · Fly.io · YouTube API | [앱](https://daily-english-hyungmo.fly.dev) · [YouTube](https://www.youtube.com/channel/UCIBCHpm-Y71wkQBVet9wXzw) | 비공개 |
 | 매일하루영단어 (일본인) | 같은 파이프라인을 일본어 사용자용으로 분기 | FastAPI · PWA · YouTube API | [앱](https://daily-english-hyungmo.fly.dev/#ja) · [YouTube](https://www.youtube.com/channel/UCVguZaN1HSqr8uhzFE4momQ) | 비공개 |
