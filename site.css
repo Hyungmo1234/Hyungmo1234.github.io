@@ -538,6 +538,7 @@ h1 {
   font-size: 15px;
   line-height: 1.7;
 }
+.lede span { display: block; word-break: keep-all; }
 .weekly {
   background: var(--card);
   border: 1px solid var(--line);
