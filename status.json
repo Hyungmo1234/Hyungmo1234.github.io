@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-17T03:24+09:00",
+  "checkedAt": "2026-11-17T11:03+09:00",
   "ok": false,
-  "summary": "이상 매일하루영단어 (마지막 성공 11-16 17:29 · 이후 슬롯이 안 보임), 매일하루영단어 (일본인) (마지막 성공 11-16 18:00 · 이후 슬롯이 안 보임), 매일하루일본어 (curl: (22) The requested URL returned error: 404)",
+  "summary": "이상 매일하루영단어 (마지막 성공 11-17 03:51 · 이후 슬롯이 안 보임), 매일하루일본어 (curl: (22) The requested URL returned error: 404)",
   "jobs": {
     "daily-english": {
       "id": "daily-english",
@@ -9,9 +9,9 @@
       "ok": false,
       "state": "wait",
       "label": "지연",
-      "summary": "마지막 성공 11-16 17:29 · 이후 슬롯이 안 보임",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43831489676",
-      "at": "2026-11-16T08:29:40Z",
+      "summary": "마지막 성공 11-17 03:51 · 이후 슬롯이 안 보임",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43932886170",
+      "at": "2026-11-16T18:51:59Z",
       "web": {
         "ok": true,
         "code": 200
@@ -20,12 +20,12 @@
     "daily-english-ja": {
       "id": "daily-english-ja",
       "name": "매일하루영단어 (일본인)",
-      "ok": false,
-      "state": "wait",
-      "label": "지연",
-      "summary": "마지막 성공 11-16 18:00 · 이후 슬롯이 안 보임",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43835640013",
-      "at": "2026-11-16T09:00:38Z"
+      "ok": true,
+      "state": "ok",
+      "label": "정상",
+      "summary": "11-17 04:23 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/43938420523",
+      "at": "2026-11-16T19:23:07Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -34,8 +34,8 @@
       "state": "bad",
       "label": "이상",
       "summary": "curl: (22) The requested URL returned error: 404",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43928117449",
-      "at": "2026-11-16T18:22:46Z"
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/43987359172",
+      "at": "2026-11-17T00:24:49Z"
     },
     "daily-house": {
       "id": "daily-house",
