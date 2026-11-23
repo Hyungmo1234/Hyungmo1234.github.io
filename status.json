@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-23T11:38+09:00",
-  "ok": true,
-  "summary": "스케줄 모두 정상",
+  "checkedAt": "2026-11-23T20:16+09:00",
+  "ok": false,
+  "summary": "이상 매일하루영단어 (일본인) (마지막 성공 11-23 12:05 · 이후 슬롯이 안 보임)",
   "jobs": {
     "daily-english": {
       "id": "daily-english",
@@ -9,9 +9,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-23 11:26 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45100050104",
-      "at": "2026-11-23T02:26:06Z",
+      "summary": "11-23 19:57 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45160520168",
+      "at": "2026-11-23T10:57:40Z",
       "web": {
         "ok": true,
         "code": 200
@@ -20,12 +20,12 @@
     "daily-english-ja": {
       "id": "daily-english-ja",
       "name": "매일하루영단어 (일본인)",
-      "ok": true,
-      "state": "ok",
-      "label": "정상",
-      "summary": "11-23 07:34 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45078377281",
-      "at": "2026-11-22T22:34:31Z"
+      "ok": false,
+      "state": "wait",
+      "label": "지연",
+      "summary": "마지막 성공 11-23 12:05 · 이후 슬롯이 안 보임",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45103750636",
+      "at": "2026-11-23T03:05:29Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -33,9 +33,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-23 10:06 성공",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/45092559608",
-      "at": "2026-11-23T01:06:17Z"
+      "summary": "11-23 17:10 성공",
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/45136467714",
+      "at": "2026-11-23T08:10:58Z"
     },
     "daily-house": {
       "id": "daily-house",
@@ -43,9 +43,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-23 10:46 오늘 치 이미 발행 · 이후 실행은 생략",
-      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/45096432136",
-      "at": "2026-11-23T01:46:35Z",
+      "summary": "11-23 16:29 오늘 치 이미 발행 · 이후 실행은 생략",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/45131461866",
+      "at": "2026-11-23T07:29:39Z",
       "web": {
         "ok": true,
         "code": 200
