@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-26T13:21+09:00",
+  "checkedAt": "2026-11-26T23:23+09:00",
   "ok": true,
   "summary": "스케줄 모두 정상",
   "jobs": {
@@ -7,11 +7,11 @@
       "id": "daily-english",
       "name": "매일하루영단어",
       "ok": true,
-      "state": "ok",
-      "label": "정상",
-      "summary": "11-26 10:18 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45734652792",
-      "at": "2026-11-26T01:18:44Z",
+      "state": "wait",
+      "label": "실행 중",
+      "summary": "11-26 23:22 돌아가는 중",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45838426309",
+      "at": "2026-11-26T14:22:59Z",
       "web": {
         "ok": true,
         "code": 200
@@ -23,9 +23,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-26 10:21 성공",
-      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45734920028",
-      "at": "2026-11-26T01:21:19Z"
+      "summary": "11-26 22:51 성공",
+      "url": "https://github.com/Hyungmo1234/daily-english/actions/runs/45832954020",
+      "at": "2026-11-26T13:51:21Z"
     },
     "daily-nihongo": {
       "id": "daily-nihongo",
@@ -33,9 +33,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-26 12:00 성공",
-      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/45746071640",
-      "at": "2026-11-26T03:00:42Z"
+      "summary": "11-26 22:45 성공",
+      "url": "https://github.com/Hyungmo1234/daily-nihongo/actions/runs/45832134793",
+      "at": "2026-11-26T13:45:35Z"
     },
     "daily-house": {
       "id": "daily-house",
@@ -43,9 +43,9 @@
       "ok": true,
       "state": "ok",
       "label": "정상",
-      "summary": "11-26 12:36 오늘 치 이미 발행 · 이후 실행은 생략",
-      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/45749944391",
-      "at": "2026-11-26T03:36:06Z",
+      "summary": "11-26 17:10 오늘 치 이미 발행 · 이후 실행은 생략",
+      "url": "https://github.com/Hyungmo1234/daily-house/actions/runs/45780854855",
+      "at": "2026-11-26T08:10:03Z",
       "web": {
         "ok": true,
         "code": 200
